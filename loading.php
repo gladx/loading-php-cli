@@ -1,12 +1,15 @@
 <?php
 
-for ($i=0; $i < 10000; $i++) { 
-    $delay = rand(1000000,3000000);
-    echo ".  ", "Loading\r";
-    usleep($delay);
-    echo ".. ", "Loading\r";
-    usleep($delay);
-    echo "...", "Loading\r";
-    usleep($delay);
+function loadingDot(){
+    for ($i=0; $i < 10000; $i++) {
+        $delay = rand(100000, 300000);
+        echo ".  ", "Loading\r";
+        usleep($delay);
+        echo ".. ", "Loading\r";
+        usleep($delay);
+        echo "...", "Loading\r";
+        usleep($delay);
+    }
 }
 
+loadingDot();

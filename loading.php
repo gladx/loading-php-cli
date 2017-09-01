@@ -7,10 +7,10 @@ function style($style= 'dot')
                 loading();
                 break;
             case 'dash':
-                loading('-', ' ', 3, 10);
+                loading('-', ' ', 3, 3);
                 break;
             case 'pipe':
-                loading('|', '.', 40, 2, 1000);
+                loading('|', '.', 40);
                 break;
             case 'bar1' :
                 loading($str = '▉', $space = ' ');
@@ -45,15 +45,9 @@ function loading($str = '.', $space = ' ', $pad = 20, $repeat = 1, $delay = 1000
     echo "\033[?25h"; //  "\033[?25h" Show the cursor.
 }
 
-style('dot');
-style('dash');
-style('pipe');
-style('bar1');
-style('bar2');
-style('bar3');
-
-
-
-
-
-
+style('dot'); //  [............            ] Loading
+style('dash'); // [-----------             ] Loading
+style('pipe'); // [|||||||||||||||.........] Loading
+style('bar1'); // [▉▉▉▉▉▉▉▉▉▉▉▉▉       ] Loading
+style('bar2'); //    [▊▊▊▊▊▊▊▊▊▊▊▊░░░░░░░░] Loading
+style('bar3'); //    [▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░] Loading
